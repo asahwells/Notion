@@ -19,7 +19,6 @@ const SearchBar: FC<IProps> = ({search, setSearch}) => {
         onChangeText={setSearch}
         placeholder="Search here"
       />
-
       <Image
         source={require('../assets/images/search.png')}
         style={tw`w-4 h-4`}
