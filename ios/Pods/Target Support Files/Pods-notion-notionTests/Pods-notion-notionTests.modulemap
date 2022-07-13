@@ -1,0 +1,6 @@
+module Pods_notion_notionTests {
+  umbrella header "Pods-notion-notionTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

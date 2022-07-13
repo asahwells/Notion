@@ -1,0 +1,6 @@
+module Pods_notion {
+  umbrella header "Pods-notion-umbrella.h"
+
+  export *
+  module * { export * }
+}
