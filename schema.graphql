@@ -1,0 +1,25 @@
+interface User {
+  id: ID!
+  firstName: String!
+  lastName: String! 
+}
+
+
+type Doctor implements User {
+   id: ID!
+  firstName: String! @fake(type:firstName)
+  lastName: String!  @fake(type:lastName)
+  image: String! @fake(type:imageUrl)
+}
+
+type Appointments {
+  id: ID!
+ reason: String!@fake(type:lorem,options:{loremSize: sentence})
+  doctor: Doctor
+  date: String!@examples(values:["2028-03-13T17:13:50Z","2021-02-13T17:17:50Z","1992-09-12T17:11:40Z","2022-02-14T16:20:30Z","2028-03-13T17:13:50Z","2021-02-13T17:17:50Z","2021-02-13T17:17:50Z"])
+  
+}
+
+type Query {
+  appoint: [Appointments] @listLength(min:10,max:24)
+}
